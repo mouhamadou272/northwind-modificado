@@ -4,6 +4,9 @@ Este repositorio contiene una versión modificada de la base de datos Northwind 
 
 ## 📋 Descripción del Proyecto
 
+![Imagen JSONB](./img/images.png)
+![Imagen github JSONB](./img/github_image.png)
+
 La base de datos Northwind ha sido extendida con las siguientes mejoras:
 
 ### ✨ Nuevas Funcionalidades
@@ -183,3 +186,5 @@ Si tienes problemas con la instalación:
 ---
 
 **Nota**: Este proyecto demuestra conocimientos avanzados en PostgreSQL aplicados sobre la conocida base de datos Northwind, añadiendo funcionalidades empresariales reales.
+
+
