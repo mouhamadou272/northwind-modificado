@@ -12,11 +12,7 @@ La base de datos Northwind ha sido extendida con las siguientes mejoras:
 ### ✨ Nuevas Funcionalidades
 
 - **Sistema de Categorías Jerárquicas**: Subcategorías para mejor organización
-- **Control de Stock Avanzado**: Alertas automáticas y stock mínimo
-- **Descuentos por Volumen**: Sistema automatizado de descuentos
-- **Auditoría Completa**: Registro de cambios en productos
-- **Vistas de Análisis**: Reportes de ventas y productos
-- **Triggers Inteligentes**: Automatización de procesos
+- **vuestra modificación**
 
 ## 🛠️ Tecnologías
 
@@ -34,8 +30,8 @@ northwind-postgres-modificado/
 │   ├── INSTALACION.md                 # Guía de instalación
 │   ├── FUNCIONALIDADES.md             # Documentación de mejoras
 │   └── CONSULTAS_EJEMPLO.md           # Ejemplos de uso
-└── screenshots/
-    ├── diagrama_er.png                # Diagrama actualizado
+└── img/
+    ├── iagrama_er.png                # Diagrama actualizado
     └── consultas_ejemplo.png          # Capturas de pantalla
 ```
 
@@ -187,4 +183,7 @@ Si tienes problemas con la instalación:
 
 **Nota**: Este proyecto demuestra conocimientos avanzados en PostgreSQL aplicados sobre la conocida base de datos Northwind, añadiendo funcionalidades empresariales reales.
 
+```sql
+CREATE TABLE cliente
+```
 
