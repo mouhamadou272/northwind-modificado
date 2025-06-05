@@ -60,12 +60,12 @@ cd northwind-modificado
 
 2. **Crear base de datos**
 ```bash
-createdb northwind_modificado
+ createdb northwind_00 -U tu_usuario_postgre
 ```
 
 3. **Restaurar dump completo**
 ```bash
-psql -d northwind_curso -f northwind_modificado.sql
+psql -U tu_usuario -d northwind_00 -f northwind_modificado.sql
 ```
 
 ¡Y listo! La base de datos estará completamente configurada con datos de ejemplo.
