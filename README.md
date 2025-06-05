@@ -54,7 +54,7 @@ northwind-modificado/
 
 1. **Clonar repositorio**
 ```bash
-git clone https://github.com/mouhamadou272/northwind-modificado
+git clone https://github.com/mouhamadou272/northwind-modificado.git
 cd northwind-modificado
 ```
 
