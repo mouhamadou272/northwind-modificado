@@ -35,13 +35,10 @@ Realicé un volcado (pg_dump) de la base de datos modificada para preservar los 
 ## 📁 Estructura del Repositorio
 
 ```
-northwind-postgres-modificado/
-├── README.md                          # Este archivo
+northwind-modificado/
+├── README_original                          # Este archivo
 ├── northwind_modificado.sql           # ⭐ DUMP COMPLETO DE LA BD
-├── docs/
-│   ├── INSTALACION.md                 # Guía de instalación
-│   ├── FUNCIONALIDADES.md             # Documentación de mejoras
-│   └── CONSULTAS_EJEMPLO.md           # Ejemplos de uso
+├── img/
 └── screenshots/
     ├── diagrama_er.png                # Diagrama actualizado
     └── consultas_ejemplo.png          # Capturas de pantalla
@@ -57,13 +54,13 @@ northwind-postgres-modificado/
 
 1. **Clonar repositorio**
 ```bash
-git clone https://github.com/tu-usuario/northwind-postgres-modificado.git
-cd northwind-postgres-modificado
+git clone https://github.com/mouhamadou272/northwind-modificado
+cd northwind-modificado
 ```
 
 2. **Crear base de datos**
 ```bash
-createdb northwind_curso
+createdb northwind_modificado
 ```
 
 3. **Restaurar dump completo**
@@ -73,11 +70,6 @@ psql -d northwind_curso -f northwind_modificado.sql
 
 ¡Y listo! La base de datos estará completamente configurada con datos de ejemplo.
 
-### Alternativa con pgAdmin
-1. Crear nueva base de datos llamada `northwind_curso`
-2. Click derecho → Restore
-3. Seleccionar archivo `northwind_modificado.sql`
-4. Ejecutar
 
 ## 🔍 Funcionalidades Principales
 
@@ -120,76 +112,20 @@ SELECT * FROM top_productos_vendidos LIMIT 10;
 - `top_productos_vendidos` - Ranking de productos
 - `analisis_clientes` - Segmentación de clientes
 
-## 🔧 Funciones y Triggers
 
-- **Auditoría automática** en cambios de productos
-- **Alertas de stock** cuando baja del mínimo
-- **Cálculo de descuentos** por volumen de compra
-- **Actualización automática** de timestamps
-
-## 📝 Datos de Prueba
-
-El dump incluye:
-- Base Northwind completa original
-- 8 subcategorías de ejemplo
-- 8 reglas de descuento por volumen
-- Configuración de stock mínimo
-- Alertas de ejemplo generadas
-
-## 🧪 Validar Instalación
-
-Después de restaurar, ejecuta estas consultas para verificar:
-
-```sql
--- Verificar nuevas tablas
-SELECT count(*) FROM subcategories;        -- Debe mostrar 8
-SELECT count(*) FROM volume_discounts;     -- Debe mostrar 8
-SELECT count(*) FROM stock_alerts;        -- Debe mostrar varias
-
--- Probar vistas
-SELECT count(*) FROM productos_stock_bajo;
-SELECT count(*) FROM ventas_mensuales;
-
--- Probar función
-SELECT calcular_descuento_volumen(1, 100);  -- Debe mostrar 10.00
-```
 
 ## 📋 Especificaciones Técnicas
 
-- **Versión PostgreSQL**: 12+
+- **Versión PostgreSQL**: 17.5
 - **Tamaño del dump**: ~500KB
 - **Total tablas**: 17 (13 originales + 4 nuevas)
 - **Total vistas**: 4
 - **Total funciones**: 3
-- **Triggers**: 1 principal con múltiples eventos
 
 ## 👨‍🎓 Información Académica
 
 - **Curso**: Bases de Datos Avanzadas
-- **Institución**: [Tu Institución]
-- **Autor**: [Tu Nombre]
-- **Fecha**: Mayo 2025
+- **Institución**: [Urko]
+- **Autor**: [Mouhamdou Bachir Seck ]
+- **Fecha**: junio 2025
 
-## 📞 Soporte
-
-Si tienes problemas con la instalación:
-
-1. Verifica que PostgreSQL esté corriendo
-2. Asegúrate de tener permisos para crear BD
-3. Revisa que el archivo SQL esté completo
-4. Consulta los logs de PostgreSQL para errores
-
-## 🎯 Objetivos de Aprendizaje Demostrados
-
-- ✅ Modificación de esquemas existentes
-- ✅ Creación de tablas relacionadas
-- ✅ Implementación de triggers
-- ✅ Desarrollo de vistas complejas
-- ✅ Funciones en PL/pgSQL
-- ✅ Optimización con índices
-- ✅ Sistemas de auditoría
-- ✅ Generación de dumps
-
----
-
-**Nota**: Este proyecto demuestra conocimientos avanzados en PostgreSQL aplicados sobre la conocida base de datos Northwind, añadiendo funcionalidades empresariales reales.
