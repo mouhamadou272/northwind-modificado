@@ -4,22 +4,33 @@ Este repositorio contiene una versión modificada de la base de datos Northwind 
 
 ## 📋 Descripción del Proyecto
 
-La base de datos Northwind ha sido extendida con las siguientes mejoras:
+Este proyecto consiste en la modificación de la base de datos Northwind, una base de datos de ejemplo comúnmente utilizada para prácticas de SQL. El objetivo es personalizar la tabla products, poblarla con nuevos registros y generar una copia de seguridad de la base de datos modificada.
 
-### ✨ Nuevas Funcionalidades
+### ✨  Modificaciones realizadas
 
-- **Sistema de Categorías Jerárquicas**: Subcategorías para mejor organización
-- **Control de Stock Avanzado**: Alertas automáticas y stock mínimo
-- **Descuentos por Volumen**: Sistema automatizado de descuentos
-- **Auditoría Completa**: Registro de cambios en productos
-- **Vistas de Análisis**: Reportes de ventas y productos
-- **Triggers Inteligentes**: Automatización de procesos
+En este proyecto he realizado las siguientes modificaciones a la base de datos Northwind original:
 
+Tabla products:
+
+Añadí una nueva columna llamada expiration_date para registrar la fecha de caducidad de cada producto.
+
+Cambié el tipo de la columna discontinued de integer a boolean para mejorar la legibilidad y el manejo de valores lógicos.
+
+Poblé la tabla con múltiples registros nuevos, representando productos variados (aceite, café, té, vino, quesos, etc.) con datos realistas y completos.
+
+Gestión de product_id:
+
+Asigné manualmente los valores de product_id en las inserciones, asegurando que no se repitan y respetando la integridad de la clave primaria.
+
+Backup de la base de datos:
+
+Realicé un volcado (pg_dump) de la base de datos modificada para preservar los cambios y facilitar la restauración o migración.
 ## 🛠️ Tecnologías
 
 - **PostgreSQL** 12+ 
 - **pgAdmin** (opcional)
-- **SQL Dump** para instalación rápida
+- **SQL Dump** para instalación rápidA
+- **Github**
 
 ## 📁 Estructura del Repositorio
 
